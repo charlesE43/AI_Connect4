@@ -39,15 +39,15 @@ def createBoard():
     board = np.zeros((ROW_COUNT,COL_COUNT))
     return board
 
-
+#Drops piece
 def putPiece(board, row, col, piece):
     board[row][col] = piece
 
-
+#Checks if piece can go into this position
 def is_valid(board, col):
     return board[ROW_COUNT-1][col] == 0
 
-
+#returns the next open spot
 def get_next_open_spot(board, col):
     for r in range(ROW_COUNT):
         if board[r][col] == 0:
